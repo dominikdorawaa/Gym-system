@@ -1,4 +1,4 @@
-package com.entity;
+package com.dominikdorawaa.entity;
 
 public enum MembershipStatus {
     ACTIVE, CANCELED

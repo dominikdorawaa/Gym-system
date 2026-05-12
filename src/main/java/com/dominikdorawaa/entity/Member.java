@@ -1,4 +1,4 @@
-package com.entity;
+package com.dominikdorawaa.entity;
 
 import java.time.LocalDate;
 
