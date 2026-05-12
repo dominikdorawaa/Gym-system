@@ -1,5 +1,5 @@
 package com.entity;
 
-public enum MemberShipPlanType {
+public enum MembershipPlanType {
     BASIC, PREMIUM, GROUP
 }

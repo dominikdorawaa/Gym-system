@@ -37,6 +37,6 @@ public class Gym {
     private String phoneNumber;
 
     @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<MemberShipPlan> membershipPlans = new ArrayList<>();
+    private List<MembershipPlan> membershipPlans = new ArrayList<>();
 
 }

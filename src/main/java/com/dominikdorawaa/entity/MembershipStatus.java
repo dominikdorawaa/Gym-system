@@ -1,5 +1,5 @@
 package com.entity;
 
-public enum MemberShipStatus {
+public enum MembershipStatus {
     ACTIVE, CANCELED
 }

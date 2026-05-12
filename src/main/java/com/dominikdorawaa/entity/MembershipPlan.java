@@ -28,7 +28,7 @@ import jakarta.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "membership_plan")
-public class MemberShipPlan {
+public class MembershipPlan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,7 +51,7 @@ public class MemberShipPlan {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "plan_type", nullable = false)
-    private MemberShipPlanType planType;
+    private MembershipPlanType planType;
 
     @OneToMany(mappedBy = "membershipPlan", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Member> members = new ArrayList<>();

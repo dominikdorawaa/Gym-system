@@ -1,4 +1,4 @@
-package com.dominikdorawaa.gym_system;
+package com.dominikdorawaa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

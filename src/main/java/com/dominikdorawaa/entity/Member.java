@@ -42,19 +42,19 @@ public class Member {
 
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    private MemberShipStatus status;
+    private MembershipStatus status;
 
     @Column(name = "join_date", nullable = false, updatable = false)
     private LocalDate joinDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "membership_plan_id", nullable = false)
-    private MemberShipPlan membershipPlan;
+    private MembershipPlan membershipPlan;
 
     @PrePersist
     protected void onCreate() {
         this.joinDate = LocalDate.now();
-        this.status = MemberShipStatus.ACTIVE;
+        this.status = MembershipStatus.ACTIVE;
     }
 
 }
