@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.dominikdorawaa.DTO.GymDto;
+import com.dominikdorawaa.dto.GymDto;
 import com.dominikdorawaa.entity.Gym;
 import com.dominikdorawaa.repository.GymRepository;
 

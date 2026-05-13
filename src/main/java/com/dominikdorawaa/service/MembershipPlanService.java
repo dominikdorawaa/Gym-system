@@ -1,7 +1,6 @@
 package com.dominikdorawaa.service;
 
 import org.springframework.stereotype.Service;
-import com.dominikdorawaa.entity.MembershipPlanType;
 import com.dominikdorawaa.dto.MembershipPlanDto;
 import com.dominikdorawaa.entity.Gym;
 import com.dominikdorawaa.entity.MembershipPlan;
