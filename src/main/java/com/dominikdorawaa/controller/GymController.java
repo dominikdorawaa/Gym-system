@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dominikdorawaa.dto.GymDto;
+import com.dominikdorawaa.dto.RevenueReportDto;
 import com.dominikdorawaa.service.GymService;
 
 @RestController
@@ -32,6 +33,11 @@ public class GymController {
     @GetMapping
     public ResponseEntity<List<GymDto>> getAllGyms() {
         return ResponseEntity.ok(gymService.getAllGyms());
+    }
+
+    @GetMapping("/revenue-report")
+    public ResponseEntity<List<RevenueReportDto>> getRevenueReport() {
+        return ResponseEntity.ok(gymService.getRevenueReport());
     }
 
 }
