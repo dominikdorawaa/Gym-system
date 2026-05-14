@@ -37,6 +37,10 @@ public class MemberService {
             throw new IllegalStateException("Plan capacity reached. Cannot add more members.");
         }
 
+        if (memberRepository.existsByEmail(request.email())) {
+            throw new IllegalStateException("Member with this email is already registered.");
+        }
+
         Member member = new Member();
         member.setFirstName(request.firstName());
         member.setLastName(request.lastName());

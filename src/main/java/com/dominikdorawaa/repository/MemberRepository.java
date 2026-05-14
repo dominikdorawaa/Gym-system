@@ -14,6 +14,8 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     long countByMembershipPlanIdAndStatus(Long planId, MembershipStatus status);
 
+    boolean existsByEmail(String email);
+
     @Query("SELECT g.name AS gymName, SUM(mp.monthlyPrice) AS amount, mp.currency AS currency " +
             "FROM Member m " +
             "JOIN m.membershipPlan mp " +
