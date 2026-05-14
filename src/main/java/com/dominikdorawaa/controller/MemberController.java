@@ -16,6 +16,8 @@ import com.dominikdorawaa.dto.MemberDto;
 import com.dominikdorawaa.dto.MemberRegistrationDto;
 import com.dominikdorawaa.service.MemberService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 public class MemberController {
@@ -28,8 +30,8 @@ public class MemberController {
 
     @PostMapping("/plans/{planId}/members")
     public ResponseEntity<MemberDto> registerMember(
-            @PathVariable Long planId, 
-            @RequestBody MemberRegistrationDto request) {
+            @PathVariable Long planId,
+            @Valid @RequestBody MemberRegistrationDto request) {
         MemberDto createdMember = memberService.registerMember(planId, request);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMember);
     }
