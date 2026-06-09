@@ -2,6 +2,7 @@ package com.dominikdorawaa.controller;
 
 import java.util.List;
 
+import com.dominikdorawaa.service.RevenueReportService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,9 +36,6 @@ public class GymController {
         return ResponseEntity.ok(gymService.getAllGyms());
     }
 
-    @GetMapping("/revenue-report")
-    public ResponseEntity<List<RevenueReportDto>> getRevenueReport() {
-        return ResponseEntity.ok(gymService.getRevenueReport());
-    }
+
 
 }
